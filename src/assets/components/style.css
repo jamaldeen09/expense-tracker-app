@@ -1,0 +1,112 @@
+
+/* universal styles */
+*{
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+    font-family:monospace;
+}
+
+/* navbar */
+nav{
+    padding: 30px 30px;
+    color: white;
+    background: linear-gradient(to right, rgb(2, 2, 78), rgb(0, 0, 0));
+    box-shadow: 0px 0px 30px darkblue;
+    font-size: 1.2rem;
+}
+
+/* body styles */
+body{
+    background: linear-gradient(to right, rgb(0, 0, 0), rgb(2, 2, 78));
+}
+
+/* container styles */
+.container{
+    height: 110vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding-top: 10px;
+}
+
+/* inner container styles */
+.inner-container{
+    width: 95vw;
+    height: 95vh;
+    color:white;
+    background: linear-gradient(to right, rgb(10, 20, 65), rgb(11, 11, 195));
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction: column;
+    gap:50px;
+    border-radius: 20px;
+}
+
+.inner-container h1{
+    font-size: 3rem;
+}
+/* button styles */
+button {
+    background: rgb(0, 0, 95);
+    color:white;
+    border:none;
+    padding: 15px 20px;
+    transform: scale(1);
+    transition: transform 0.6s ease-in-out, filter 0.6s ease-in-out;
+    border-radius: 10px;
+}
+
+button:hover{
+    transform: scale(1.1);
+    cursor:pointer;
+    filter:brightness(150%);
+}
+
+
+/* label and input styles */
+label{
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+input{
+    font-size:1.9rem;
+    border-radius: 20px;
+    text-align:center;
+    font-weight:bold;
+    margin-left: 20px;
+    border:none;
+}
+
+/* button container */
+
+.buttons-container{
+    display:flex;
+    gap: 50px;
+}
+
+/* mood card */
+.moods{
+    height: 20vh;
+    width: 15vw;
+    border-radius: 20px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction: column;
+    background: rgb(6, 6, 243);
+    color:white;
+    gap: 20px;
+    font-weight: bold;
+    box-shadow: 0px 0px 20px blue;
+    transform: rotateY(0deg);
+    transition: transform 0.6s ease-in-out, box-shadow 0.6s ease-in-out;
+}
+
+.moods:hover{
+    box-shadow: 0px 0px 40px blue;
+    cursor:pointer;
+    transform: rotateY(15deg);
+}
