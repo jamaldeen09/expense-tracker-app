@@ -1,0 +1,100 @@
+
+/* universal styles */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* container styles */
+.container button{
+    font-size: 0.8rem;
+    background-color:grey;
+    border-radius: 10px;
+    padding: 10px 20px;
+    color:white;
+    background-color:rgb(0, 186, 248);
+    border:none;
+    transform: scale(1);
+    transition: transform 0.6s ease;
+    margin-left: 2rem;
+}
+
+.container button:hover{
+    cursor:pointer;
+    filter: brightness(90%);
+    transform: scale(1.1);
+}
+
+
+
+.container{
+    background-color:hsl(0, 0%, 89%);
+    height: 100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+
+/* inner container */
+
+.emojiReactionContainer{
+    background-color: white;
+    min-height: 60vh;
+    width: 35vw;
+    border-radius: 20px;
+    box-shadow: 0px 1px 2px grey;
+    overflow:hidden;
+    padding-bottom: 30px;
+}
+
+.emojiReactionContainer h2{
+    background-color: rgb(0, 186, 248);
+    color:white;
+    padding: 30px 30px;
+}
+
+
+.userEmoji{
+    margin-top:1rem;
+    padding: 20px 20px;
+}
+
+/* labels and inputs */
+label{
+    font-weight: bold;
+    font-size:1.1rem;
+}
+
+input{
+    font-size: 1.3rem;
+    border-radius: 10px;
+    border: 0.9px solid grey;
+    width: 4vw;
+    text-align:center;
+    font-weight: bold;
+}
+
+
+/* containe results */
+.emoji-container{
+    margin-top: 2rem;
+    min-height: 10vh;
+    display:flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.emoji-info{
+    border: 5px solid;
+    height: 7vh;
+    border-radius: 10px;
+    background-color: rgb(0, 186, 248);
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding: 0px 20px;
+}
