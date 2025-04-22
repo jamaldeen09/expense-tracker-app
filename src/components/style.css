@@ -1,242 +1,161 @@
-/* universal styles */
+
+
+/* universal font family */
 *{
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
 }
 
-/* container styles */
+/* container */
 .container{
-    display: flex;
+    height: 100vh;
+    display:flex;
     justify-content:center;
     align-items:center;
-    height: 100vh;
-    background-color: rgb(196, 168, 143);
+    background-color: darkblue;
 }
 
-/* innerContainer styles */
-.innerContainer{
-    min-height: 65vh;
-    width: 32vw;
-    background-color: black;
-    border: 1px solid blue;
+/* BMI calculator */
+.BMI-calculator{
+    min-height: 70vh;
+    width: 35vw;
+    background-color: rgb(23, 23, 85);
     border-radius: 20px;
-    box-shadow: 0px 0px 2px grey;
     text-align:center;
-    padding: 30px 15px;
-    box-shadow: 0px 0px 0px blue;
-    transition: box-shadow 0.6s ease-in-out;
+    padding: 20px 40px;
+    padding-bottom: 40px;
 }
 
-.innerContainer:hover{
-    box-shadow: 0px 0px 5px blue;
-}
-
-/* ui section */
-.uiSection{
-    line-height: 2;
-}
-
-.uiSection h1{
+/* BMI heading */
+.BMI-heading{
     color:white;
-    font-size: 2.5rem;
+    font-size: 1.2rem;
+    line-height: 2.5;
 }
 
-input[type="text"]{
-    height: 5vh;
-    border-radius: 3px;
-    border: none;
-    font-size: 1.5rem;
-    width: 13vw;
-    margin-top: 1rem;
-    text-align:center;
-}
-
-.uiSection .btn{
-    background-color:blue;
-    height: 4.5vh;
-    padding: 9px 10px;
-    font-size: 1.1rem;
-    font-weight: bold;
-    border:none;
-    border-radius: 10px;
-    margin-left: 0.5rem;
-    transform: scale(1);
-    transition: transform 0.6s ease;
-}
-
-.uiSection .btn:hover{
-    cursor: pointer;
-    filter: brightness(90%);
-    transform: scale(1.1);
-}
-
-/* task list container styles */
-.taskListContainer{
-    margin-top: 1.2rem;
-    min-height: 10vh;
+.height-weight-choice{
     display:flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 10px 20px;
-}
-
-.taskListContainer h2{
-    color:white;
-}
-
-/* users list or request styles */
-.usersList{
-    width: 100%;
-    min-height: 5vh;
-    display:flex;
-    flex-direction: column;
+    justify-content:center;
     gap: 15px;
 }
 
-/* item styles */
-.todoItem{
-    width: 100%;
-    height: 5vh;
-    border: 1px solid white;
-    display:flex;
-    justify-content: space-between;
-    padding-right: 20px;
-    padding-left: 20px;
-    border-radius: 10px;
+
+.height-weight label{
+    margin-left: 0.5rem;
+    font-size: 1rem;
 }
 
-
-/* item generated styles */
-
-.itemGenerated label{
-    color:white;
-    font-weight: bold;
-    margin-left: 0.4rem;
-    position:relative;
-    top: 0.1rem;
-}
-
-.itemGenerated{
-    margin-top: 0.2rem;
-}
-
-input[type = "checkbox"]{
+.height-weight input[type = "radio"]{
+    position: relative;
+    bottom: 0.1rem;
     cursor: pointer;
 }
 
-
-/* extra buttons container */
-
-.extra-buttons{
+/* height container */
+.height-weightContainer{
     display:flex;
-    gap: 20px;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 1rem;
+    min-height:10vh;
 }
 
+
+input[type = "number"]{
+    width: 25vw;
+    height: 5vh;
+    border-radius: 10px;
+    border: none;
+    padding: 5px 20px;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+
+/* calculate button */
+.calcuate-btnContainer{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+
+.calcuate-btnContainer button{
+    width: 25vw;
+    height: 6vh;
+    font-weight: bold;
+    color:white;
+    background-color:hsl(120, 59%, 44%);
+    border:none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+}
+
+.calcuate-btnContainer button:hover{
+    cursor: pointer;
+    filter: brightness(90%);
+}
 
 /* media queries */
 
 
-
 /* large desktop screens */
 @media (max-width: 1024px){
-    .innerContainer{
-        width: 60vw !important;
-        min-height: 68vh !important;
+    .BMI-calculator{
+        min-height: 80vh !important;
+        width: 40vw;
+        padding-bottom: 40px !important;
     }
 
-    .uiSection .btn{
-        position: relative;
-        top: 0.01rem !important;
-        height: 5vh;
-        margin-left: 1rem;
+    .BMI-heading{
+        line-height: 2;
     }
 
-    input[type="text"]{
-        width: 26vw;
-        height: 6vh !important; 
-    }
-    
-    .itemGenerated{
-        height: 2vh !important;
-    }
-
-    .btn-text{
-        position:relative;
-        top: 0.01rem;
-    }
-
-    label{
-        position: relative;
-        top: 0.3rem !important;
-    }
-
-    input[type = "checkbox"]{
-        position: relative;
-        top: 0.4rem;
+    .BMI-heading h1{
+        font-size: 1.4rem;
     }
 }
 
 
-
 /* tablet screens */
 @media (max-width: 768px){
-    .innerContainer{
-        width: 70vw !important;
+    .BMI-calculator{
+        min-height: 50vh !important;
+        width: 50vw;
     }
 
-    input[type="text"]{
+    input[type = "number"]{
         width: 30vw;
-        font-size: 1rem;
     }
 
-    .btn-text{
-        position:relative;
-        top: 0.01rem;
+    button{
+        width: 30vw !important;
     }
 
-    .uiSection .btn{
-        position:relative;
-        top: 0.1rem;
-        margin-left: 1rem;
-        height: 5vh;
+    .BMI-result{
+        width: 30vw !important;
+        height: 7vh !important;
     }
-
-    .itemGenerated label{
-        top: 0.3rem !important;
-    }
-
-    input[type = "checkbox"]{
-        position: relative;
-        top:0.3rem !important;
-    }
-
 }
 
 
 /* mobile screens */
 @media (max-width: 600px){
-    .innerContainer{
-        width: 90vw !important;
+    .BMI-calculator{
+        width: 60vw !important;
     }
 
-    input[type="text"]{
-        width: 30vw;
-        font-size: 1rem;
+    input[type = "number"]{
+        width: 40vw;
     }
 
-    .uiSection .btn{
-        margin-left: 0.9rem;
-        height: 5vh !important;
+    button{
+        width: 40vw !important;
     }
 
-    input[type="text"]{
-        height: 6vh !important;;
-    }
-    
-    input[type = "checkbox"]{
-        position: relative;
-        top: 3px !important;
+    .BMI-result{
+        width: 40vw !important;
     }
 }
