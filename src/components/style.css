@@ -159,3 +159,38 @@ input:hover{
         transform: translateY(10px);
     }
 }
+
+
+
+/* media queries */
+
+@media (max-width: 1024px){
+    .expense-container h1{
+        font-size: 2rem;
+    }
+
+    .expense-container{
+        padding-bottom: 30px !important;
+        width: 60vw;
+        min-height: 20vh !important;
+    }
+
+    /* input{
+        width: 31vw;
+    } */
+    /* .categories{
+        width: 28vw;
+        position :relative;
+        left: 1rem;
+    }
+
+    button{
+        width: 31vw;
+    }
+    .expense-handler-btn{
+        width: 28vw;
+        position :relative;
+        left: 1rem;
+    } */
+
+}

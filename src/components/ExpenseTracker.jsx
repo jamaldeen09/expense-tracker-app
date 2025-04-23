@@ -99,7 +99,7 @@ const ExpenseTracker = () => {
                     <option value="Transport">Transport</option>
                     <option value="other" >other</option>
                 </select>
-                <button onClick={handleAddingExpense}>Add Expense</button>
+                <button className= "expense-handler-btn" onClick={handleAddingExpense}>Add Expense</button>
             </div>
 
             <div className="filtering">
@@ -115,8 +115,7 @@ const ExpenseTracker = () => {
             </div>
 
             <div className="userExpenses">
-            {expensesArr.filter((expense) => {if (userFiltering === "" || userFiltering === "All") return true;return expense.category.toLowerCase() === userFiltering.toLowerCase();}).map((expense, index) => (<ExpenseItem key={index} expenseName={expense.name} expenseAmount={expense.amount} expenseCategory={expense.category} onDelete={() => handleDelete(index)}/>))}
-                
+                {expensesArr.filter((expense) => {if (userFiltering === "" || userFiltering === "All") return true;return expense.category.toLowerCase() === userFiltering.toLowerCase();}).map((expense, index) => (<ExpenseItem key={index} expenseName={expense.name} expenseAmount={expense.amount} expenseCategory={expense.category} onDelete={() => handleDelete(index)}/>))}
             </div>
 
             <div>
